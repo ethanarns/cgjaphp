@@ -11,7 +11,46 @@ header {
     max-width: $maxWidth;
     padding: 2rem;
     box-sizing: border-box;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+$heroHeight: 20rem;
+$heroHeightMobile: 10rem;
+
+section.hero {
+    background-image: url('../images/bg_forest.jpg');
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    height: $heroHeight;
     p {
+        text-align: center;
+        margin: 0;
+        padding: 0 2rem;
+        padding-top: $heroHeight / 2 - 1rem;
+        //width: 100%;
         font-style: italic;
+        color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1rem !important;
+        margin: 0 !important;
+        h1 {
+            font-size: 1.25rem !important;
+            margin: 0 !important;
+        }
+    }
+    section.hero {
+        height: $heroHeightMobile !important;
+        p {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: $heroHeightMobile / 2 - 1.5rem !important;
+        }
     }
 }
